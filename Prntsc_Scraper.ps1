@@ -1,8 +1,7 @@
-﻿$Fail=0;
+$Fail=0;
 $count = 0;
 While($true)
 {
-
     function URIGen(){
     $arr ='a','b','c','d','e','f',
         'g','h','i','j','k','l',
@@ -19,11 +18,8 @@ While($true)
         }
         return $pass;
     }
-
-
 $URI = URIGen;
 Try {wget -Uri (curl https://prnt.sc/$URI).Images[0].src -OutFile "F:\prtscr\$URI.jpg"}
 Catch { $Fail += 1;}
 $count +=1;
 }
-
